@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rental Information - Isra Rental Orbit</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-image: url("C:\xampp\htdocs\ISRA_RENT_ORBIT\image\home.jpg.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    .glass-effect {
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-white">
+  <div class="glass-effect p-10 m-6 rounded-2xl shadow-2xl">
+    <h1 class="text-4xl text-center text-red-600 font-bold mb-6">Rental Information</h1>
+
+    <div class="mb-8">
+      <h2 class="text-2xl text-red-500 border-b border-red-500 pb-2 mb-4">Current Rentals</h2>
+      <table class="w-full table-auto bg-black bg-opacity-50 rounded-lg">
+        <thead>
+          <tr class="text-left border-b border-gray-500">
+            <th class="p-3">Car</th>
+            <th class="p-3">Renter Name</th>
+            <th class="p-3">Rental Date</th>
+            <th class="p-3">Return Date</th>
+            <th class="p-3">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-gray-600">
+            <td class="p-3">Hyundai i20</td>
+            <td class="p-3">Amit Sharma</td>
+            <td class="p-3">2025-04-01</td>
+            <td class="p-3">2025-04-07</td>
+            <td class="p-3 text-green-400">Ongoing</td>
+          </tr>
+          <!-- Add more current rental rows here -->
+        </tbody>
+      </table>
+    </div>
+
+    <div>
+      <h2 class="text-2xl text-red-500 border-b border-red-500 pb-2 mb-4">Past Rentals</h2>
+      <table class="w-full table-auto bg-black bg-opacity-50 rounded-lg">
+        <thead>
+          <tr class="text-left border-b border-gray-500">
+            <th class="p-3">Car</th>
+            <th class="p-3">Renter Name</th>
+            <th class="p-3">Rental Date</th>
+            <th class="p-3">Return Date</th>
+            <th class="p-3">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-gray-600">
+            <td class="p-3">Maruti Swift</td>
+            <td class="p-3">Riya Das</td>
+            <td class="p-3">2025-03-15</td>
+            <td class="p-3">2025-03-20</td>
+            <td class="p-3 text-gray-400">Completed</td>
+          </tr>
+          <!-- Add more past rental rows here -->
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mt-8 text-center">
+      <a href="index.html" class="text-red-500 hover:underline">Back to Home</a>
+    </div>
+  </div>
+</body>
+</html>
