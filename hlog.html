@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Dashboard - Isra Rental Orbit</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: white;
+    }
+    .glass {
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+    }
+  </style>
+</head>
+<body>
+  <header class="bg-black border-b-4 border-red-600 py-4 px-8 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-red-600">Isra Rental Orbit - User Dashboard</h1>
+    <nav>
+      <a href="logout.php" class="text-white hover:text-red-500">Logout</a>
+    </nav>
+  </header>
+
+  <main class="p-10">
+    <section class="glass p-8 rounded-lg shadow-xl">
+      <h2 class="text-3xl font-bold text-red-500 mb-6">Welcome, User!</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="bg-black bg-opacity-60 p-6 rounded-lg border border-red-600">
+          <h3 class="text-xl font-semibold mb-2">Book a Car</h3>
+          <p class="text-gray-300 mb-4">Choose from our wide range of vehicles for rent.</p>
+          <a href="book.html" class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded">Book Now</a>
+        </div>
+
+        <div class="bg-black bg-opacity-60 p-6 rounded-lg border border-red-600">
+          <h3 class="text-xl font-semibold mb-2">My Rentals</h3>
+          <p class="text-gray-300 mb-4">View your current and past rentals.</p>
+          <a href="my_rentals.html" class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded">View Rentals</a>
+        </div>
+
+        <div class="bg-black bg-opacity-60 p-6 rounded-lg border border-red-600">
+          <h3 class="text-xl font-semibold mb-2">Update Profile</h3>
+          <p class="text-gray-300 mb-4">Edit your personal and contact details.</p>
+          <a href="edit_profile.html" class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded">Edit Profile</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+</body>
+</html>
