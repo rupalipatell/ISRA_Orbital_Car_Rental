@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Isra Rental Orbit</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-image: url('./img/bg.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .glass-effect {
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+    }
+  </style>
+</head>
+<body class="h-screen">
+  <div class="h-full flex items-center justify-center bg-black bg-opacity-70">
+    <div class="glass-effect p-8 rounded-2xl shadow-2xl flex w-full max-w-4xl">
+      <div class="w-1/2 hidden md:block">
+        <img src="./img/ln.jpg" alt="Login Visual" class="rounded-xl w-full h-auto" />
+      </div>
+      <div class="w-full md:w-1/2 pl-0 md:pl-10 flex flex-col justify-center">
+        <h2 class="text-4xl text-red-600 font-bold mb-6 text-center">Login to Isra Rental Orbit</h2>
+        <div class="flex justify-center gap-4 mb-4">
+          <button onclick="showLogin('user')" class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded">User</button>
+          <button onclick="showLogin('admin')" class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded">Admin</button>
+        </div>
+
+        <!-- User Login -->
+        <form id="user-login" class="hidden flex flex-col gap-4" action="user_login.php" method="POST">
+          <input type="email" name="email" placeholder="User Email" class="p-3 rounded bg-black bg-opacity-60 border border-red-600 text-white w-full" />
+          <input type="password" name="password" placeholder="Password" class="p-3 rounded bg-black bg-opacity-60 border border-red-600 text-white w-full" />
+          <button class="bg-red-600 hover:bg-red-700 text-white font-semibold py-3 rounded w-full">Login as User</button>
+        </form>
+
+        <!-- Admin Login -->
+        <form id="admin-login" class="hidden flex flex-col gap-4" action="admin_login.php" method="POST">
+          <input type="email" name="email" placeholder="Admin Email" class="p-3 rounded bg-black bg-opacity-60 border border-red-600 text-white w-full" />
+          <input type="password" name="password" placeholder="Password" class="p-3 rounded bg-black bg-opacity-60 border border-red-600 text-white w-full" />
+          <button class="bg-red-600 hover:bg-red-700 text-white font-semibold py-3 rounded w-full">Login as Admin</button>
+        </form>
+
+        <p class="mt-4 text-gray-300 text-center">
+          Don't have an account?
+          <a href="register.html" class="text-red-500 hover:underline">Register</a>
+          | <a href="index.html" class="text-red-500 hover:underline">Home</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showLogin(role) {
+      document.getElementById('user-login').style.display = role === 'user' ? 'flex' : 'none';
+      document.getElementById('admin-login').style.display = role === 'admin' ? 'flex' : 'none';
+    }
+  </script>
+</body>
+</html>

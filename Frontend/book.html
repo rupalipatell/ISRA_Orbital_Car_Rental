@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Car - Isra Rental Orbit</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: #0a0a0a;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .glass {
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+    }
+    .carousel img {
+      transition: opacity 0.5s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <header class="bg-black border-b-4 border-red-600 py-4 px-8 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-red-600">Isra Rental Orbit</h1>
+    <nav>
+      <a href="index.html" class="text-white hover:text-red-500">Home</a>
+    </nav>
+  </header>
+
+  <main class="p-10">
+    <section class="glass p-6 rounded-lg shadow-xl max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold text-red-500 mb-6 text-center">Book Your Ride</h2>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <!-- Carousel -->
+        <div class="carousel relative overflow-hidden rounded-lg">
+          <img id="carImage" src="images/car1.jpg" class="w-full h-64 object-cover rounded-lg border border-red-600" alt="Car Image">
+          <div class="flex justify-between absolute top-1/2 w-full px-4 transform -translate-y-1/2">
+            <button onclick="prevImage()" class="bg-red-600 px-3 py-1 rounded-full">❮</button>
+            <button onclick="nextImage()" class="bg-red-600 px-3 py-1 rounded-full">❯</button>
+          </div>
+        </div>
+
+        <!-- Car Info & Booking -->
+        <div class="space-y-4">
+          <h3 class="text-2xl font-semibold">Ford Mustang GT</h3>
+          <p class="text-gray-300">Powerful performance, luxurious comfort, and iconic style – the Mustang GT is made for unforgettable journeys.</p>
+          <ul class="list-disc ml-5 text-gray-400">
+            <li>Seats: 4</li>
+            <li>Transmission: Automatic</li>
+            <li>Fuel: Petrol</li>
+            <li>Rate: ₹5000/day</li>
+          </ul>
+          <form class="mt-4 space-y-3">
+            <input type="date" class="w-full p-2 rounded bg-black text-white border border-red-600" placeholder="Start Date">
+            <input type="date" class="w-full p-2 rounded bg-black text-white border border-red-600" placeholder="End Date">
+            <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded">Book Now</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const images = ['images/car1.jpg', 'images/car2.jpg', 'images/car3.jpg'];
+    let index = 0;
+
+    function showImage() {
+      document.getElementById('carImage').src = images[index];
+    }
+
+    function nextImage() {
+      index = (index + 1) % images.length;
+      showImage();
+    }
+
+    function prevImage() {
+      index = (index - 1 + images.length) % images.length;
+      showImage();
+    }
+  </script>
+</body>
+</html>
