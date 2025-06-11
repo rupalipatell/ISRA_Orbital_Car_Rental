@@ -1,16 +1,16 @@
 <?php
-$host     = "localhost";
+$servername = "localhost";
 $username = "root";
 $password = "";
-$dbname   = "isra_orbital";
+$dbname = "ISRA";
 
-$conn = new mysqli($host, $username, $password, $dbname);
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-
+// Check connection
 if ($conn->connect_error) {
-    die("❌ Connection failed: " . $conn->connect_error);
+    die("Connection failed: " . $conn->connect_error);
 }
-
-
-echo "✅ Database connected successfully!";
+// Uncomment for debuggingvyug
+//echo "Database connected successfully!";
 ?>

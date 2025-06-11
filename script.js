@@ -13,7 +13,7 @@ function moveCar() {
 
     // Load the login page after animation
     setTimeout(() => {
-        window.location.href = "login.html";
+        window.location.href = "login.php";
     }, 2500); // Match transition time
 }
 

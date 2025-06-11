@@ -20,11 +20,10 @@
 
     header {
       background-color: #000;
-      padding: 15px 40px;
+      padding: 11px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 3px solid #ff0000;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -33,7 +32,7 @@
     .logo {
       font-size: 32px;
       font-weight: bold;
-      color: #ff0000;
+      color: #c70303;
     }
 
     nav ul {
@@ -60,7 +59,7 @@
 
     .hero {
       position: relative;
-      background: url('./images/home.jpg') no-repeat center center/cover;
+      background: url('../images/cc.jpg') no-repeat center center/cover;
       height: 90vh;
       display: flex;
       justify-content: center;
@@ -172,12 +171,12 @@
 </head>
 <body>
   <header>
-    <div class="logo">Isra Rental Orbit</div>
+    <div class="logo">ISRA Rental Orbit</div>
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="register.html">Register</a></li>
+        <li><a href="login.php">Login</a></li>
+        <li><a href="register.php">Register</a></li>
       </ul>
     </nav>
   </header>
@@ -186,31 +185,15 @@
     <div class="overlay"></div>
     <div class="hero-content">
       <h1>Best Cars For The Best Journey</h1>
-      <p>We provide top-quality cars with the best prices. Expert in rentals, dedicated to making your drives unforgettable and safe. Let's hit the road together!</p>
-      <button>Learn More</button>
+      <p>We provide top-quality cars with the best prices. Dedicated to make your drives unforgettable and safe. Let's hit the road together!</p>
+      <a href="learn_more.php">
+  <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+    Learn More
+  </button>
+</a>
     </div>
   </section>
 
-  <section class="search-bar">
-    <h2>Find Your Perfect Ride</h2>
-    <select>
-      <option>Car Make</option>
-      <option>Toyota</option>
-      <option>Honda</option>
-      <option>BMW</option>
-    </select>
-    <select>
-      <option>Car Type</option>
-      <option>SUV</option>
-      <option>Sedan</option>
-      <option>Convertible</option>
-    </select>
-    <select>
-      <option>All Models</option>
-      <option>2022</option>
-      <option>2023</option>
-    </select>
-    <button>Search</button>
-  </section>
+ 
 </body>
 </html>
